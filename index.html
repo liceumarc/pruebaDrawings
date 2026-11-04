@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./index.js" type="module"></script>
+</head>
+<!-- Tamaños de la pantalla en tailwind
+ 
+    Moviles:
+        sm: 640px 
+    Tablet
+        md: 768px
+    Ordenador:
+        lg: 1024px
+        xl: 1280px
+        2xl: 1536px
+
+-->
+
+<body>
+    <div class="grid grid-cols-[1fr_280px] grid-rows-[auto_1fr_auto] min-h-screen">
+        <header class="col-span-2">
+            <!-- Título, login y logout -->
+            <h1>Canvas Project</h1>
+        </header>
+
+        <main>
+            <!-- Columna principal -->
+            <canvas style="
+             width: 800px;
+             height: 600px;
+             border: 1px solid black;" class="mx-auto">
+            </canvas>
+        </main>
+
+        <aside>
+            <!-- Columna lateral de 280px -->
+            <h2>Settings</h2>
+            <div>
+
+                <div class="border border-gray-300">
+                    <label for="figure-selected">Figura: </label>
+                    <select name="figura" id="figure-selected">
+                        <option value=""></option>
+                        <option value="circle">Cercle</option>
+                        <option value="square">Quadrat</option>
+                        <option value="triangle">Triangle</option>
+                        <option value="estrella7">Estrella de 7 puntes</option>
+                        <option value="rombe">Rombe</option>
+                        <option value="hexagon">Hexàgon</option>
+                        <option value="pentagon">Pentàgon</option>
+                        <option value="oval">Oval</option>
+                    </select>
+                </div>
+                <div id="each-figure-settings" class="border border-gray-300">
+                    
+                </div>
+            </div>
+        </aside>
+
+        <footer class="col-span-2">
+            <h2>Footer</h2>
+            <!-- Footer -->
+        </footer>
+    </div>
+</body>
+
+</html>
