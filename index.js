@@ -1,6 +1,5 @@
 const figureSelected = document.getElementById("figure-selected");
 const figureSettings = document.getElementById("each-figure-settings");
-
 // 1 - He declarado posibles Inputs relacionados con cada figura
 
 const nameField = { id: "name", label: "Nom", type: "text", value: "" };
@@ -57,13 +56,30 @@ function renderFields(fields){
         input.type = fields[index].type;
         input.id = fields[index].id;
         input.name = fields[index].id;
-        input.value = fields[index].value;
+        input.value = fields[index].value   ;
 
         container.appendChild(label);
         container.appendChild(input);
         figureSettings.appendChild(container);
     }
-    
+
+    figureSettings.addEventListener("input", updateValues); 
+
+    updateValues();
+
 }
+
+
+// 5 - Mostrar los datos para trabajar con ellos
+
+function updateValues(){
+    const inputs = document.querySelectorAll("input");
+    console.log(inputs);    
+    return inputs;
+}   
+
+// 6 - A partir de los datos proporcionados crear la figura 
+
+// 7 - Pintar la figura 
 
 
